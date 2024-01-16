@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling Dice</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div id="dices">
+        <img id ="dice1" src="dice6.png">
+        <img id ="dice2" src="dice6.png">
+        <img id ="dice3" src="dice6.png">
+    </div>
+    <p class="diceAmount">How many dices do you want to roll?</p>
+    <div id="forms">
+        <form class="diceAmount">
+            <div>
+                <input type="radio" id="d1" name="d1" value="d1">
+                <label for="d1">One</label><br>
+            </div>
+            <div>
+                <input type="radio" id="d2" name="d2" value="d2">
+                <label for="d2">Two</label><br>
+            </div>
+            <div>
+                <input type="radio" id="d3" name="d3" value="d3">
+                <label for="dice3">Three</label>
+            </div>
+        </form>
+        
+        <form id="rollHandler">
+            <label for="rollAmount">How many times do you want to roll?</label>
+            <input type="text" id="rollAmount" name="rollAmount">
+            <input type="submit" value="Submit"> 
+        </form>
+    </div>
+
+</body>
+</html>
