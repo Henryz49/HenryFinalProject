@@ -10,33 +10,36 @@
 </head>
 <body>
     <div id="dices">
-        <img id ="dice1" src="dice6.png">
         <img id ="dice2" src="dice6.png">
+        <img id ="dice1" src="dice6.png">
         <img id ="dice3" src="dice6.png">
     </div>
-    <p class="diceAmount">How many dices do you want to roll?</p>
-    <div id="forms">
-        <form class="diceAmount">
-            <div>
-                <input type="radio" id="d1" name="d1" value="d1">
-                <label for="d1">One</label><br>
-            </div>
-            <div>
-                <input type="radio" id="d2" name="d2" value="d2">
-                <label for="d2">Two</label><br>
-            </div>
-            <div>
-                <input type="radio" id="d3" name="d3" value="d3">
-                <label for="dice3">Three</label>
-            </div>
-        </form>
-        
+        <div class="putInline">
+        <button onclick="rollDice()"> Roll Dice</button>
         <form id="rollHandler" onsubmit="return false">
             <input type="submit" onclick="handleSubmit()"> 
             <input type="text" id="userinput">
             <label for="rollAmount">How many times do you want to roll?</label>
         </form>
-    </div>
+        </div>
+
+        <p class="diceAmount" id="1p">How many dices do you want to roll?</p>
+        <form class="diceAmount">
+            <div>
+                <input type="radio" id="d1" name="radio" value="d1" onclick="updateRadio(1)">
+                <label for="d1">One</label><br>
+            </div>
+            <div>
+                <input type="radio" id="d2" name="radio" value="d2" onclick="updateRadio(2)">
+                <label for="d2">Two</label><br>
+            </div>
+            <div>
+                <input type="radio" id="d3" name="radio" value="d3" onclick="updateRadio(3)">
+                <label for="dice3">Three</label>
+            </div>
+        </form>
+
+    
 
 </body>
 </html>
