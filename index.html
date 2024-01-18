@@ -18,12 +18,12 @@
         <button onclick="rollDice()"> Roll Dice</button>
         <form id="rollHandler" onsubmit="return false">
             <input type="submit" onclick="handleSubmit()"> 
-            <input type="text" id="userinput">
-            <label for="rollAmount">How many times do you want to roll?</label>
+            <input type="text" name = "userinput" id="userinput">
+            <label for="userinput">How many times do you want to roll?</label>
         </form>
         </div>
 
-        <p class="diceAmount" id="1p">How many dices do you want to roll?</p>
+        <p class="diceAmount" id="para1">How many dices do you want to roll?</p>
         <form class="diceAmount">
             <div>
                 <input type="radio" id="d1" name="radio" value="d1" onclick="updateRadio(1)">
@@ -35,7 +35,7 @@
             </div>
             <div>
                 <input type="radio" id="d3" name="radio" value="d3" onclick="updateRadio(3)">
-                <label for="dice3">Three</label>
+                <label for="d3">Three</label>
             </div>
         </form>
 
