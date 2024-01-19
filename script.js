@@ -3,10 +3,13 @@ let numOfDice;
 let dice1;
 let dice2;
 let dice3;
+let mean;
+let median;
+let mode;
+let dataArray=[];
 function handleSubmit(){
     let input = document.getElementById("userinput").value;
     timesRoll = input;  
-    console.log(input);
 }
 function updateRadio(num){
     let temp = num;
@@ -21,6 +24,7 @@ function updateRadio(num){
     } else if(numOfDice == 2){
         document.getElementById('dice3').style.opacity = 0;
     }
+    
 }
 
 function rollDice(){
@@ -29,15 +33,16 @@ function rollDice(){
         dice2 = Math.floor(Math.random() * 6) + 1;
         dice3 = Math.floor(Math.random() * 6) + 1;
         let temp = num;
-        console.log(temp)
         updateDice("dice1", dice1);
         updateDice("dice2", dice2);
         updateDice("dice3", dice3);
         temp = temp-1;
+        dataArray.push(dice1);
         if(temp<=0){
             return;
         }
-        setTimeout(()=>{loop(temp)}, 1000);
+
+        setTimeout(()=>{loop(temp)}, 500);
     }
     loop(timesRoll);
 }
